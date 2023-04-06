@@ -1,4 +1,20 @@
-let preciobase = parseFloat(prompt("Ingrese el precio del videojuego"))
+function usuario(nombre, apellido){
+    this.nombre = nombre;
+    this.apellido = apellido;
+}
+
+let nombre = prompt("Ingresa tu nombre");
+let apellido = prompt("Ingresa tu apellido");
+
+const usuario1 = new usuario(nombre, apellido)
+
+function saludoCompleto(nombre, apellido) {
+    alert("Bienvenido " + nombre + " " + apellido);
+}
+
+saludoCompleto(nombre, apellido)
+
+let preciobase = parseFloat(prompt("Ingrese el precio del videojuego del que desea saber su precio final"))
 
 if (preciobase != 0 || preciobase !== null) {
 
@@ -29,9 +45,7 @@ if (preciobase != 0 || preciobase !== null) {
         opcion = prompt("¿De qué plataforma es el videojuego que desea comprar? \n1 - Steam \n2 - Origin \n3 - Epic Games \nX - Finalizar");
 
     }
-
-
 }else{
-    
+    alert("Muchas gracias por usar nuestra calculadora")
 }
 
