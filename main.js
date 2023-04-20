@@ -3,8 +3,8 @@ function usuario(nombre, apellido){
     this.apellido = apellido;
 }
 
-let nombre = prompt("Ingresa tu nombre");
-let apellido = prompt("Ingresa tu apellido");
+let nombre = document.getElementById("nombre");
+let apellido = document.getElementById("apellido");
 
 const usuario1 = new usuario(nombre, apellido)
 
@@ -14,7 +14,7 @@ function saludoCompleto(nombre, apellido) {
 
 saludoCompleto(nombre, apellido)
 
-let preciobase = parseFloat(prompt("Ingrese el precio del videojuego del que desea saber su precio final"))
+let preciobase = document.getElementById("preciobase")
 
 if (preciobase != 0 || preciobase !== null) {
 
