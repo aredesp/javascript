@@ -1,0 +1,119 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 10px 30px;
+    width: 85vw;
+    background-color: #F6F1F1 ;
+}
+
+.navbar{
+    padding: 15px;
+    background-color: #146C94; 
+}
+
+.navbar_list{
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #F6F1F1;
+    font-weight: bold;
+    transition: .5s ease;
+}
+
+.logo{
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: #F6F1F1;
+    font-weight:900;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.banner h1{
+    font-size: 30px;
+    color: #146C94;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.banner_img{
+    max-width: 25vw;
+    padding: 25px 0;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    color: #146C94;
+}
+
+.news input{
+    background-color: transparent;
+    border: 1px solid #146C94;
+    margin: 5px;
+}
+
+.news button{
+    background-color: transparent;
+    border: 1px solid #146C94;
+    margin: 5px 0;
+    text-transform: uppercase;
+    padding: 5px;
+    display: block;
+    transition: all .5s;
+}
+
+.news button:hover{
+    background-color: #146C94;
+    color:#F6F1F1;
+}
+
+.news label{
+    font-size: 14px;
+}
+
+#exito{
+    margin: 15px;
+}
+
+.informacion{
+    background-color: #146C94;
+    color: #F6F1F1;
+    padding: 20px;
+}
+
+.informacion_titulo{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.informacion_titulo_s{
+    font-size: 20px;
+    margin-bottom: 10px;;
+}

@@ -9,81 +9,97 @@
     <title>Gamestax - Calculadora de impuestos</title>
 </head>
 <body>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">GAMESTAX</a></li>
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="index.html">HISTORIAL</a></li>
-            <li><a href="index.html">INICIAR SESION</a></li>
-        </ul>
-    </nav>
+   <div class="container"> 
+        <nav class="navbar">
+            <ul class="navbar_list">
+                <li><a href="index.html" class="logo">GAMESTAX</a></li>
+                <li><a href="index.html" class="link">INICIO</a></li>
+                <li><a href="index.html" class="link">HISTORIAL</a></li>
+                <li><a href="index.html" class="link">INICIAR SESION</a></li>
+            </ul>
+        </nav>
 
-    <header>
-        <div>
-            <img src="" alt="">
-            <h1>¡Calcula los impuestos de tus videojuegos!</h1>
-        </div>
-        <h2>Suscríbete a nuestro newsletter</h2>
-        <form id="newsletter">
+        <header>
 
-            <label>Nombre:</label>
-            <input type="text" id="nombre" required>
-
-            <label>Apellido:</label>
-            <input type="text" id="apellido" required>
-
-            <label for="">Correo electrónico:</label>
-            <input type="text" id="mail" required>
-
-            <div class="check">
-                <label for="check">Deseo suscribirme</label>
-                <input type="checkbox" id="check" required>
-                <p id="message"></p>
+            <div class="banner">
+                <img src="media/img/joystick.png" alt="" class="banner_img">
+                <h1>Calcula <br>los impuestos <br>de tus videojuegos</h1>
             </div>
-            
-            <button type="button" onclick="newsletter()">Suscribirse</button>
 
-            <p id="exito"></p>
-        
-        </form>
-    </header>
+            <div class="news">
+                <h2>Suscríbete a nuestro newsletter</h2>
+                <form id="newsletter">
+    
+                    <div>
+                        <label>Nombre:</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    
+                    <div>
+                        <label>Apellido:</label>
+                        <input type="text" id="apellido" required>
+                    </div>
 
-    <main>
-        <h2>Bienvenido <span id="bienvenida"></span></h2>
-        <h2>Calcular los impuestos de tus videojuegos.</h2>
-        <div>
-            <p>Gamestax es una aplicación web diseñada para poder saber el valor final de los videojuegos en Argentina.
-            Argentina posee múltiples impuestos a la hora de comprar videojuegos de forma online pero éstos no son visibles en el precio. 
-            Por eso, en Gamestax podes poner el precio que aparece en tu plataforma favorita (Steam, Epic, etc) y nosotros aplicamos los impuestos correspondientes a dicha plataforma. Para que sepas que es lo que vas a pagar!
-            </p>
-        </div>
-    </main>
+                    <div>
+                        <label for="">E-mail:</label>
+                        <input type="text" id="mail" required>
+                    </div>
 
-    <section>
-        <h3>Calculadora de impuestos</h3>
-        <form id="calculadora">
-            <label>Precio:</label>
-            <input type="number" id="preciobase" placeholder="Precio del videojuego">
+                    <div class="check">
+                        <label for="check">Deseo suscribirme</label>
+                        <input type="checkbox" id="check" required>
+                        <p id="message"></p>
+                    </div>
+                    
+                    <button type="button" onclick="newsletter()">Suscribirse</button>
+    
+                    <p id="exito"></p>
+                
+                </form>
+            </div>
 
-            <label>Seleccione la plataforma:</label>
-            <button type="button" onclick="steam()">Steam</button>
-            <button type="button" onclick="epic()">Epic Games</button>
-            <button type="button" onclick="origin()">Origin</button>
+        </header>
 
-            <p>El precio final con todos los impuestos incluidos es: <span id="resultado"></span></p>
+        <main class="informacion">
+            <h2 class="informacion_titulo">Bienvenido <span id="bienvenida"></span></h2>
+            <h2 class="informacion_titulo_s">Calcular los impuestos de tus videojuegos.</h2>
+            <div>
+                <p>
+                    Gamestax es una aplicación web diseñada para poder saber el valor final de los videojuegos en Argentina.
+                </p>
+                <p>
+                    Argentina posee múltiples impuestos a la hora de comprar videojuegos de forma online pero éstos no son visibles en el precio. 
+                </p>
+                <p>
+                    Por eso, en Gamestax podes poner el precio que aparece en tu plataforma favorita (Steam, Epic, etc) y nosotros aplicamos los impuestos correspondientes a dicha plataforma. Para que sepas que es lo que vas a pagar!
+                </p>
+            </div>
+        </main>
 
-            <p>Los impuestos aplicados fueron: <span id="impuestos"></span> </p>
-        </form>
-    </section>
+        <section>
+            <h3>Calculadora de impuestos</h3>
+            <form id="calculadora">
+                <label>Precio:</label>
+                <input type="number" id="preciobase" placeholder="Precio del videojuego">
 
-    <footer>
-        <div>
-            <p>Todos los derechos reservados © Gamestax</p>
-        </div>
-    </footer>
+                <label>Seleccione la plataforma:</label>
+                <button type="button" onclick="steam()">Steam</button>
+                <button type="button" onclick="epic()">Epic Games</button>
+                <button type="button" onclick="origin()">Origin</button>
 
-    <script src="js/app.js"></script>
+                <p>El precio final con todos los impuestos incluidos es: <span id="resultado"></span></p>
 
+                <p>Los impuestos aplicados fueron: <span id="impuestos"></span> </p>
+            </form>
+        </section>
+
+        <footer>
+            <div>
+                <p>Todos los derechos reservados © Gamestax</p>
+            </div>
+        </footer>
+
+        <script src="js/app.js"></script>
+    </div>
 </body>
 </html>
