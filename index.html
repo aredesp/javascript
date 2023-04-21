@@ -62,7 +62,7 @@
 
         <main class="informacion">
             <h2 class="informacion_titulo">Bienvenido <span id="bienvenida"></span></h2>
-            <h2 class="informacion_titulo_s">Calcular los impuestos de tus videojuegos.</h2>
+            <h2 class="informacion_titulo_s">¡Para que sepas cuanto pagas!</h2>
             <div>
                 <p>
                     Gamestax es una aplicación web diseñada para poder saber el valor final de los videojuegos en Argentina.
@@ -71,25 +71,34 @@
                     Argentina posee múltiples impuestos a la hora de comprar videojuegos de forma online pero éstos no son visibles en el precio. 
                 </p>
                 <p>
-                    Por eso, en Gamestax podes poner el precio que aparece en tu plataforma favorita (Steam, Epic, etc) y nosotros aplicamos los impuestos correspondientes a dicha plataforma. Para que sepas que es lo que vas a pagar!
+                    Por eso, en Gamestax podes poner el precio que aparece en tu plataforma favorita (Steam, Epic, etc) y nosotros aplicamos los impuestos correspondientes a dicha plataforma ¡Mereces saber cuanto vas a pagar!
                 </p>
             </div>
         </main>
 
-        <section>
-            <h3>Calculadora de impuestos</h3>
+        <section class="calculadora">
+            <h3 class="informacion_titulo">Calculadora de impuestos</h3>
             <form id="calculadora">
-                <label>Precio:</label>
-                <input type="number" id="preciobase" placeholder="Precio del videojuego">
+                <div>
+                    <label>Precio:</label>
+                    <input type="number" id="preciobase" placeholder="Precio del videojuego">
+                </div>
 
-                <label>Seleccione la plataforma:</label>
-                <button type="button" onclick="steam()">Steam</button>
-                <button type="button" onclick="epic()">Epic Games</button>
-                <button type="button" onclick="origin()">Origin</button>
+                <div>
+                    <label>Seleccione la plataforma:</label>
+                    <button type="button" onclick="steam()">Steam</button>
+                    <button type="button" onclick="epic()">Epic Games</button>
+                    <button type="button" onclick="origin()">Origin</button>
+                </div>
 
-                <p>El precio final con todos los impuestos incluidos es: <span id="resultado"></span></p>
+                <div>
+                    <p>El precio final con todos los impuestos incluidos es: <span id="resultado"></span></p>
+                </div>
 
-                <p>Los impuestos aplicados fueron: <span id="impuestos"></span> </p>
+                <div>
+                    <p>Los impuestos aplicados fueron: <span id="impuestos"></span> </p>
+                </div>
+
             </form>
         </section>
 
