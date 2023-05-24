@@ -46,6 +46,83 @@ body{
     font-weight:900;
 }
 
+.login_container{
+    display: flex;
+    justify-content: end;
+    background-color: white;
+    padding: 10px;
+    color: #146C94;
+}
+
+.login_container h2{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.loginForm{
+    display: flex;
+    gap: 10px;
+}
+
+.loginForm input{
+    background-color: transparent;
+    border: 1px solid #146C94;
+    margin: 5px;
+}
+
+.loginForm button{
+    background-color: transparent;
+    border: 1px solid #146C94;
+    margin: 5px 0;
+    text-transform: uppercase;
+    padding: 5px;
+    display: block;
+    transition: all .5s;
+}
+
+.loginForm button:hover{
+    background-color: #146C94;
+    color:#F6F1F1;
+}
+
+.loginForm label{
+    font-size: 14px;
+}
+
+
+.signupForm{
+    display: flex;
+    gap: 10px;
+}
+
+.signupForm input{
+    background-color: transparent;
+    border: 1px solid #146C94;
+    margin: 5px;
+}
+
+.signupForm button{
+    background-color: transparent;
+    border: 1px solid #146C94;
+    margin: 5px 0;
+    text-transform: uppercase;
+    padding: 5px;
+    display: block;
+    transition: all .5s;
+}
+
+.signupForm button:hover{
+    background-color: #146C94;
+    color:#F6F1F1;
+}
+
+.signupForm label{
+    font-size: 14px;
+}
+
+
+
+
 .banner{
     display: flex;
     justify-content: space-around;

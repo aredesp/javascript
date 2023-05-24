@@ -18,6 +18,25 @@
             </ul>
         </nav>
 
+        <div class="login_container">
+            
+            <div id="loginForm" class="loginForm">
+                <h2>Ingresar</h2>
+                <input type="text" id="loginUsername" placeholder="Usuario">
+                <input type="password" id="loginPassword" placeholder="Contraseña">
+                <button onclick="login()">Ingresar</button>
+                <p id="loginMessage"></p>
+              </div>
+            
+              <div id="signupForm" style="display: none;" class="signupForm">
+                <h2>Registrarse</h2>
+                <input type="text" id="signupUsername" placeholder="Usuario">
+                <input type="password" id="signupPassword" placeholder="Contraseña">
+                <button onclick="signup()">Registrarse</button>
+                <p id="signupMessage"></p>
+              </div>
+        </div>
+
         <header>
 
             <div class="banner">

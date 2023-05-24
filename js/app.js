@@ -1,14 +1,85 @@
-function usuario(nombre, apellido, mail){
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.mail = mail;
+var users = [];
+
+function login() {
+  var username = document.getElementById('loginUsername').value;
+  var password = document.getElementById('loginPassword').value;
+
+  var user = users.find(function(user) {
+    return user.username === username && user.password === password;
+  });
+
+  if (user) {
+    showMessage('Inicio de sesión exitoso!');
+  } else {
+    showMessage('User o contraseña inválidos');
+  }
 }
 
-let nombre = document.getElementById("name").value;
-let apellido = document.getElementById("last-name").value;
-let mail = document.getElementById("mail").value;
+function signup() {
+  var username = document.getElementById('signupUsername').value;
+  var password = document.getElementById('signupPassword').value;
 
-const usuario1 = new usuario(nombre, apellido, mail)
+  var isUsernameTaken = users.some(function(user) {
+    return user.username === username;
+  });
+
+  if (isUsernameTaken) {
+    showSignupMessage('Nombre de usuario ocuapdo. Elige otro');
+  } else {
+
+    var newUser = {
+      username: username,
+      password: password
+    };
+    users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(users));
+
+    showMessage('Registro exitoso!');
+    toggleForms();
+  }
+}
+
+function showMessage(message) {
+  var messageElement = document.getElementById('loginMessage');
+  messageElement.innerText = message;
+}
+
+function showSignupMessage(message) {
+  var signupMessageElement = document.getElementById('signupMessage');
+  signupMessageElement.innerText = message;
+}
+
+function toggleForms() {
+  var loginForm = document.getElementById('loginForm');
+  var signupForm = document.getElementById('signupForm');
+
+  loginForm.style.display = (loginForm.style.display === 'none') ? 'flex' : 'none';
+  signupForm.style.display = (signupForm.style.display === 'none') ? 'flex' : 'none';
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  var storedUsers = localStorage.getItem('users');
+  if (storedUsers) {
+    users = JSON.parse(storedUsers);
+  } else {
+    // Usuarios para prueba
+    var defaultUsers = [
+      { username: 'user1', password: 'password1' },
+      { username: 'user2', password: 'password2' },
+      { username: 'user3', password: 'password3' }
+    ];
+    users = defaultUsers;
+    localStorage.setItem('users', JSON.stringify(defaultUsers));
+  }
+
+  var storedUsername = localStorage.getItem('username');
+  if (storedUsername) {
+    showMessage('Welcome back, ' + storedUsername + '!');
+  } else {
+    toggleForms();
+  }
+});
+
 
 const $form = document.querySelector('#form')
 
